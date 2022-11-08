@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVMDemo.Views.ViewOperaciones" 
+             BackgroundColor="Azure">
+    <ContentPage.Content>
+        <StackLayout Padding="12">
+            <Label Text="Calculadora" HorizontalTextAlignment="Center" FontSize="Large" FontAttributes="Bold"></Label>
+            <StackLayout BackgroundColor="White" Padding="8">
+                <Entry  Text="{Binding ValorA}"></Entry>
+                <Entry Text="{Binding ValorB}"></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="Sumar" Command="{Binding Sumar}" BackgroundColor="SkyBlue"></Button>
+                <Button Text="Restar" Command="{Binding Restar}" BackgroundColor="SkyBlue"></Button>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Button Text="Multiplicar" Command="{Binding Multiplicar}" BackgroundColor="ForestGreen"></Button>
+                <Button Text="Dividir" Command="{Binding Dividir}" BackgroundColor="ForestGreen"></Button>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label Text="Resultado: " TextColor="DarkBlue" FontSize="Large" FontAttributes="Bold"></Label>
+                <Label Text="{Binding ResultadoOperacion}" FontSize="Large"></Label>
+            </StackLayout>
+            <Label Text="{Binding MessageValidation}" TextColor="Red"  FontSize="Medium" HorizontalOptions="CenterAndExpand"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
