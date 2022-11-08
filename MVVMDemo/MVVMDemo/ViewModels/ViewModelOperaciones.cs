@@ -102,6 +102,7 @@ namespace MVVMDemo.ViewModels
                 }
                 else
                 {
+                    ResultadoOperacion = 0;
                     MessageValidation = "NO ES POSIBLE DIVIDIR ENTRE 0";
                 }              
             });
